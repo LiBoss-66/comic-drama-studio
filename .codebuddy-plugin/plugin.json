@@ -1,0 +1,82 @@
+{
+  "name": "comic-drama-studio",
+  "version": "1.0.0",
+  "description": "A comic drama production team that turns stories into style-consistent, AI-generatable comic drama videos via scriptwriting, character design, and storyboarding.",
+  "author": {
+    "name": "WorkBuddy User",
+    "email": "user@workbuddy.cn"
+  },
+  "agents": [
+    "./agents/comic-drama-studio-team-lead.md",
+    "./agents/comic-scriptwriter.md",
+    "./agents/comic-storyboarder.md",
+    "./agents/comic-character-designer.md"
+  ],
+
+  "expertType": "team",
+  "agentName": "comic-drama-studio-team-lead",
+  "teamInfo": {
+    "leadAgent": "comic-drama-studio-team-lead",
+    "memberAgents": ["comic-scriptwriter", "comic-storyboarder", "comic-character-designer"]
+  },
+
+  "displayName": {
+    "en": "Comic Drama Studio",
+    "zh": "漫剧工作室"
+  },
+  "profession": {
+    "en": "Comic Drama Studio",
+    "zh": "漫剧工作室"
+  },
+  "displayDescription": {
+    "en": "A production team that turns your story into a style-consistent AI comic drama video, covering script, characters, storyboards and prompts.",
+    "zh": "把你的故事变成风格统一的 AI 漫剧视频，一站式完成编剧、角色库、分镜与生成提示词。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "06-ContentCreative",
+  "defaultInitPrompt": {
+    "zh": "帮我写一部国风修仙题材的漫剧，主角是个落魄剑修，先给我故事主线和角色设定。",
+    "en": "Write me a xianxia comic drama about a down-and-out sword cultivator, starting with the story premise and character setups."
+  },
+  "plugin": "comic-drama-studio",
+  "tags": [
+    { "en": "Comic Drama", "zh": "漫剧制作" },
+    { "en": "AI Video", "zh": "AI 视频" },
+    { "en": "Storyboard", "zh": "分镜脚本" }
+  ],
+  "quickPrompts": [
+    { "en": "Write me a xianxia comic drama about a down-and-out sword cultivator, starting with the story premise and character setups.", "zh": "帮我写一部国风修仙题材的漫剧，主角是个落魄剑修，先给我故事主线和角色设定。" },
+    { "en": "Turn this short story into a 10-episode comic drama with consistent character design and shot-by-shot prompts.", "zh": "把这段短篇小说做成 10 集漫剧，保证角色一致，并给出逐镜头提示词。" },
+    { "en": "Build a character library and unified art style for my comic drama so the characters look consistent across all shots.", "zh": "为我的漫剧建立角色库和统一画风，保证每个镜头里角色形象一致。" }
+  ],
+  "members": [
+    {
+      "id": "comic-drama-studio-team-lead",
+      "displayName": { "en": "Ke Man Sheng", "zh": "柯漫生" },
+      "profession": { "en": "Comic Drama Director", "zh": "漫剧总导演" },
+      "avatar": "avatars/comic-drama-studio-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "comic-scriptwriter",
+      "displayName": { "en": "Wen Lan", "zh": "文澜" },
+      "profession": { "en": "Comic Drama Scriptwriter", "zh": "漫剧编剧" },
+      "avatar": "avatars/comic-scriptwriter.png",
+      "role": "member"
+    },
+    {
+      "id": "comic-storyboarder",
+      "displayName": { "en": "Su Jing", "zh": "苏镜" },
+      "profession": { "en": "Storyboard Artist", "zh": "分镜师" },
+      "avatar": "avatars/comic-storyboarder.png",
+      "role": "member"
+    },
+    {
+      "id": "comic-character-designer",
+      "displayName": { "en": "Yan Si", "zh": "颜司" },
+      "profession": { "en": "Character & Style Artist", "zh": "角色画师" },
+      "avatar": "avatars/comic-character-designer.png",
+      "role": "member"
+    }
+  ]
+}
