@@ -1,0 +1,14 @@
+{
+  "project_id": "example-project",
+  "title": "",
+  "platform": "抖音",
+  "aspect_ratio": "9:16",
+  "episode_duration_seconds": 90,
+  "current_episode": 1,
+  "style_anchor": "",
+  "generation": {
+    "enabled": false,
+    "provider": null,
+    "credits_confirmed": false
+  }
+}

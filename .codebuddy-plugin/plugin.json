@@ -1,7 +1,7 @@
 {
   "name": "comic-drama-studio",
-  "version": "1.0.0",
-  "description": "A comic drama production team that turns stories into style-consistent, AI-generatable comic drama videos via scriptwriting, character design, and storyboarding.",
+  "version": "1.1.0",
+  "description": "An on-demand AI comic drama consultant and studio: answers script, character-consistency, storyboard, prompt, voice and editing questions, works on local project files, and can dispatch a production team when asked.",
   "author": {
     "name": "WorkBuddy User",
     "email": "user@workbuddy.cn"
@@ -10,14 +10,20 @@
     "./agents/comic-drama-studio-team-lead.md",
     "./agents/comic-scriptwriter.md",
     "./agents/comic-storyboarder.md",
-    "./agents/comic-character-designer.md"
+    "./agents/comic-character-designer.md",
+    "./agents/comic-quality-supervisor.md",
+    "./agents/comic-critical-reviewer.md",
+    "./agents/comic-voice-director.md",
+    "./agents/comic-video-editor.md",
+    "./agents/comic-topic-advisor.md"
   ],
+  "skills": ["./skills/comic-drama-memory"],
 
   "expertType": "team",
   "agentName": "comic-drama-studio-team-lead",
   "teamInfo": {
     "leadAgent": "comic-drama-studio-team-lead",
-    "memberAgents": ["comic-scriptwriter", "comic-storyboarder", "comic-character-designer"]
+    "memberAgents": ["comic-scriptwriter", "comic-storyboarder", "comic-character-designer", "comic-quality-supervisor", "comic-critical-reviewer", "comic-voice-director", "comic-video-editor", "comic-topic-advisor"]
   },
 
   "displayName": {
@@ -29,14 +35,14 @@
     "zh": "漫剧工作室"
   },
   "displayDescription": {
-    "en": "A production team that turns your story into a style-consistent AI comic drama video, covering script, characters, storyboards and prompts.",
-    "zh": "把你的故事变成风格统一的 AI 漫剧视频，一站式完成编剧、角色库、分镜与生成提示词。"
+    "en": "Your AI comic drama consultant: solves script, character consistency, storyboard, prompt, voice and editing problems on demand, and can dispatch a full production team when asked.",
+    "zh": "你的 AI 漫剧顾问：按需解决编剧、角色一致性、分镜、提示词、配音剪辑等问题，需要时调度完整团队。"
   },
   "avatar": "avatars/team.png",
   "categoryId": "06-ContentCreative",
   "defaultInitPrompt": {
-    "zh": "帮我写一部国风修仙题材的漫剧，主角是个落魄剑修，先给我故事主线和角色设定。",
-    "en": "Write me a xianxia comic drama about a down-and-out sword cultivator, starting with the story premise and character setups."
+    "zh": "我在做 AI 漫剧，帮我诊断一个问题：主角总跟配角撞脸，怎么解决角色一致性和差异化？",
+    "en": "I'm making an AI comic drama. Help me diagnose: my protagonist keeps looking like the supporting characters. How do I fix character consistency and differentiation?"
   },
   "plugin": "comic-drama-studio",
   "tags": [
@@ -45,9 +51,9 @@
     { "en": "Storyboard", "zh": "分镜脚本" }
   ],
   "quickPrompts": [
-    { "en": "Write me a xianxia comic drama about a down-and-out sword cultivator, starting with the story premise and character setups.", "zh": "帮我写一部国风修仙题材的漫剧，主角是个落魄剑修，先给我故事主线和角色设定。" },
-    { "en": "Turn this short story into a 10-episode comic drama with consistent character design and shot-by-shot prompts.", "zh": "把这段短篇小说做成 10 集漫剧，保证角色一致，并给出逐镜头提示词。" },
-    { "en": "Build a character library and unified art style for my comic drama so the characters look consistent across all shots.", "zh": "为我的漫剧建立角色库和统一画风，保证每个镜头里角色形象一致。" }
+    { "en": "I'm making an AI comic drama. Help me diagnose: my protagonist keeps looking like the supporting characters. How do I fix character consistency and differentiation?", "zh": "我在做 AI 漫剧，帮我诊断一个问题：主角总跟配角撞脸，怎么解决角色一致性和差异化？" },
+    { "en": "Review my script's plot logic and hooks, then tell me what to fix before I publish episode 3.", "zh": "帮我挑一挑第 3 集的剧情逻辑和钩子，发布前有哪些要改。" },
+    { "en": "Help me set up a local project folder and character library for a 20-episode comic drama so it stays consistent across episodes.", "zh": "帮我在本地建一个 20 集漫剧的项目目录和角色库，保证跨集一致。" }
   ],
   "members": [
     {
@@ -76,6 +82,41 @@
       "displayName": { "en": "Yan Si", "zh": "颜司" },
       "profession": { "en": "Character & Style Artist", "zh": "角色画师" },
       "avatar": "avatars/comic-character-designer.png",
+      "role": "member"
+    },
+    {
+      "id": "comic-quality-supervisor",
+      "displayName": { "en": "Yan Guo Guan", "zh": "严过关" },
+      "profession": { "en": "Quality Supervisor", "zh": "质量监督" },
+      "avatar": "avatars/comic-quality-supervisor.png",
+      "role": "member"
+    },
+    {
+      "id": "comic-critical-reviewer",
+      "displayName": { "en": "Chang Tiao Ci", "zh": "常挑刺" },
+      "profession": { "en": "Chief Critical Reviewer", "zh": "首席否定官" },
+      "avatar": "avatars/comic-critical-reviewer.png",
+      "role": "member"
+    },
+    {
+      "id": "comic-voice-director",
+      "displayName": { "en": "Sheng Ruo Yu", "zh": "声若雨" },
+      "profession": { "en": "Voice Director", "zh": "配音导演" },
+      "avatar": "avatars/comic-voice-director.png",
+      "role": "member"
+    },
+    {
+      "id": "comic-video-editor",
+      "displayName": { "en": "Jian Yi Dao", "zh": "剪一刀" },
+      "profession": { "en": "Video Editor", "zh": "剪辑合成师" },
+      "avatar": "avatars/comic-video-editor.png",
+      "role": "member"
+    },
+    {
+      "id": "comic-topic-advisor",
+      "displayName": { "en": "Xuan Ti Qian", "zh": "选题前" },
+      "profession": { "en": "Topic Advisor", "zh": "立项顾问" },
+      "avatar": "avatars/comic-topic-advisor.png",
       "role": "member"
     }
   ]

@@ -8,6 +8,7 @@ profession:
   en: "Comic Drama Scriptwriter"
   zh: "漫剧编剧"
 maxTurns: 50
+skills: [comic-drama-memory]
 ---
 
 # 漫剧编剧 - 文澜

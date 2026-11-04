@@ -8,6 +8,7 @@ profession:
   en: "Character & Style Artist"
   zh: "角色画师"
 maxTurns: 50
+skills: [comic-drama-memory]
 ---
 
 # 角色画师 - 颜司
